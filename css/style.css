@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li, a {
+    color: #1e2425;
+}
+
+/* h1 {
+    font-family: 'Abril Fatface', serif;
+} */
+
+#flex-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-flex-item {
+    min-height: 100px;
+    border: 1px solid #333;
+}
+
+/* Header */
+
+#header {
+    padding: 2%;
+    display: flex;
+}
+
+#header-logo {
+    width: 25%;
+}
+
+#header-logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+#main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+#main-menu-list {
+    display: flex;
+    list-style-type: none;
+}
+
+#main-menu-list a {
+    text-decoration: none;
+    font-weight: 400;
+    padding: 2px 5px;
+}
+
+#main-nav-icons {
+    display: flex;
+}
+
+#main-nav-icons {
+    width: 20%;
+}
+
+#account, #basket {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #bfe5cf;
+    margin: 5px;
+}
+
+#account img, #basket img {
+    height: 35px;
+    width: auto;
+    margin-left: auto;
+}
+
+#searchbar input {
+    width: 500px;
+    flex: 0 1 500px;
+}
