@@ -13,50 +13,96 @@
 /* Header */
 
 #header {
-    padding: 2% 82px 2% 82px;
+    height: 122px;
+    padding: 0 78px 0px 78px;
     display: flex;
     background-color: white;
 }
 
 #header-logo {
-    width: 35%;
+    width: 20%;
+    padding-top: 37px;
 }
 
 #header-logo img {
-    max-width: 180px;
+    width: 156px;
     height: auto;
-    padding-top: 13px;
 }
 
 #main-menu {
     display: flex;
-    flex-wrap: wrap;
-    width: 65%;
+    width: 80%;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-#main-menu-list {
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    border: none;
+    background-color: transparent;
+}
+
+.dropbtn strong {
+    color: var(--secondary-brand-color);
+}
+
+.dropbtn, .dropdown-content a {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#searchbar {
     display: flex;
-    list-style-type: none;
-    padding: 0;
+    align-items: center;
+    width: 56%;
+    margin: 0 5px;
 }
 
-#main-menu-list a {
-    text-decoration: none;
-    font-weight: 400;
-    padding: 2px 5px;
+#searchbar input {
+    flex: 0 1 450px;
+    border: 2px solid var(--primary-brand-color);
+    border-right: none;
+    border-radius: 24px 0 0 24px;
+    padding: 1em;
+    font-size: 14px;
+    position: relative;
 }
 
-#menu-categories {
-    background-color: var(--primary-brand-color);
-    border-radius: 4px;
+#searchbar #submit {
+    width: 60px;
+    height: 49px;
+    background-color: transparent;
+    border: 2px solid var(--primary-brand-color);
+    border-left: none;
+    border-radius: 0 24px 24px 0;
+    cursor: pointer;
+}
+
+#search-icon {
+    width: 35px;
+    height: 35px;
 }
 
 #main-nav-icons {
     display: flex;
-}
-
-#main-nav-icons {
-    width: 20%;
 }
 
 #account, #basket {
@@ -72,12 +118,4 @@
     width: auto;
     margin-left: 7px;
     margin-top: 7px;
-}
-
-#searchbar input {
-    width: 500px;
-    flex: 0 1 500px;
-    border: 2px solid var(--primary-brand-color);
-    border-radius: 4px;
-    padding: 0.5em;
 }

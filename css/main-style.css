@@ -8,6 +8,7 @@ html {
 }
 
 body {
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--main-bg-color);
@@ -23,6 +24,10 @@ body {
 
 li, a {
     color: #1e2425;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* h1 {
