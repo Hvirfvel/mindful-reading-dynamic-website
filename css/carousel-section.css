@@ -1,0 +1,24 @@
+#carousel {
+    padding-top: 80px;
+}
+
+#carousel-text {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#carousel-illustrations {
+    display: flex;
+}
+
+.carousel-cell {
+    margin-top: 60px;
+    width: 55%;
+    height: auto;
+    counter-increment: carousel-cell;
+}
+
+.carousel-cell:before {
+    display: block;
+    content: counter(carousel-cell);
+}
