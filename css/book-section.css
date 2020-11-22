@@ -1,6 +1,14 @@
 .section-product-list {
-    margin: 0 8%;
-    margin-top: 45px;
+    padding: 45px 8% 0 8%;
+    margin-bottom: 100px;
+}
+
+#section-product-list-2 {
+    background-color: var(--section-bg-color);
+}
+
+#section-product-list-3 {
+    margin-bottom: 0;
 }
 
 .book-section-category {
@@ -9,7 +17,7 @@
     margin-left: 30px;
 }
 
-.category-headline {
+.category-headline, #browse-cat h2 {
     margin: 0;
     font-family: 'Abril Fatface', serif;
     font-size: 30px;
@@ -98,6 +106,26 @@
     font-weight: bold;
 }
 
+/* Browse categories */
+#browse-cat {
+    display: flex;
+    padding-top: 15px;
+}
+
+#browse-cat h2 {
+    padding-right: 0.5em;
+    padding-left: 30px;
+}
+
+#browse-cat img {
+    padding-top: 5px;
+}
+
+#popup-icon {
+    width: 2em;
+    height: auto;
+}
+
 /* Add button */
 .add-btn {
     font-size: 0.9em;
@@ -108,101 +136,3 @@
     border: none;
     border-radius: 24px;
     width: 100%;
-
-/* #book-sections-main {
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-}
-
-.book-section-category {
-    display: flex;
-    align-items: baseline;
-    margin-left: 100px;
-}
-
-.category-headline {
-    font-family: 'Abril Fatface', serif;
-    font-size: 30px;
-    margin-left: 32px;
-}
-
-.category-show-all {
-    padding: 0 2em;
-}
-
-.book-section {
-    display: flex;
-    justify-content: center;
-    margin: 5px auto 40px auto;
-    width: 84%;
-}
-
-.one-book {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.one-book * {
-    margin: 0 32px;
-}
-
-.books-image {
-    width: 136px;
-    height: auto;
-    padding-bottom: 0.6em;
-}
-
-.book-title {
-    font-weight: bold;
-    
-}
-
-.book-author {
-    font-size: 0.9em;
-    line-height: 1.5em;
-    padding-top: 0.4em;
-}
-
-.book-rating {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0.7em;
-}
-
-.book-rating-stars {
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
-}
-
-.fa-star {
-    margin: 0;
-    padding-right: 2px;
-    color: #dcdcdc;
-}
-
-#checked {
-    color: #f9af22;
-}
-
-.book-rating-num {
-    font-size: 0.75em;
-    margin: 0;
-}
-
-.book-price {
-    font-weight: bold;
-    padding: 0.7em 0 0.5em 0;
-}
-
-.add-btn {
-    font-size: 0.9em;
-    color: var(--secondary-brand-color);
-    background-color: var(--primary-brand-color);
-    padding: 0.75em 0;
-    border: none;
-    border-radius: 24px;
-} */

@@ -8,19 +8,22 @@ html {
   box-sizing: inherit;
 }
 
+
+:root {
+    --main-bg-color: #f2f0ef;
+    --section-bg-color: #ffffff;
+    --main-text-color: #1e2425;
+    --primary-brand-color: #bfe5cf;
+    --secondary-brand-color: #4D64A8;
+    --tertiary-brand-color: #0F225C;
+    
+}
+
 body {
     width: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--main-bg-color);
-}
-
-:root {
-    --main-bg-color: #f2f0ef;
-    --main-text-color: #1e2425;
-    --primary-brand-color: #bfe5cf;
-    --secondary-brand-color: #4D64A8;
-    --tertiary-brand-color: #0F225C;
 }
 
 li, a {
