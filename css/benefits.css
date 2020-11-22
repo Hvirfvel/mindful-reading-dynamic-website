@@ -1,0 +1,53 @@
+/* Why Reading */
+#why-reading-section {
+    padding: 65px 8% 100px 8%;
+    background-color: white;
+}
+
+#reading-benefits-headline {
+    padding-bottom: 60px;
+    font-size: 2.1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.benefits-icon {
+    width: inherit;
+    height: 131px;
+}
+
+#why-reading-section .benefits-icon img {
+    width: 131px;
+    height: 131px;
+    display: block;
+    margin: 0 auto;
+}
+
+#reading-benefits-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits-ind {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.benefits-ind h4 {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 1.5em;
+    padding-bottom: 0.6em;
+    text-align: center;
+}
+
+.benefits-ind p {
+    text-align: center;
+}
+
+#benefits-link {
+    display: block;
+    padding-top: 2.1em;
+    text-align: end;
+}
