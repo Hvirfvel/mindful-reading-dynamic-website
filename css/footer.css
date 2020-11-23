@@ -1,0 +1,33 @@
+#footer {
+    background-color: white;
+    position: relative;
+    font-size: 0.9em;
+}
+
+#footer-bg img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#all-info-footer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 8% 2em 8%;
+}
+
+#all-info-footer h4 {
+    font-weight: bold;
+}
+
+#footer-info-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+#shopping, #customer-service {
+    padding: 0 40px;
+}
