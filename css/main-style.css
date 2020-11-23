@@ -52,6 +52,13 @@ p {
     line-height: 1.5em;
 }
 
-/* h1 {
-    font-family: 'Abril Fatface', serif;
-} */
+/* Huvudstruktur */
+#flex-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidopadding för allt content utom header och footer */
+.main-flex-item-content {
+    padding: 0 8%;
+}

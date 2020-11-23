@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindful Reading</title>
     <!--CSS-->
-    <link rel="stylesheet" href="css/header.css">
+    <!-- <link rel="stylesheet" href="css/header.css"> -->
+    <link rel="stylesheet" href="css/header-grid.css">
     <link rel="stylesheet" href="css/main-style.css">
     <link rel="stylesheet" href="css/carousel-section.css">
     <link rel="stylesheet" href="css/book-section.css">
@@ -23,23 +24,29 @@
             <div id="header-logo">
                 <a href="#"><img src="img/logo/mindful-reading-logo-bigger-dot-blue-blue.svg" alt="Mindful Reading logo"></a>
             </div>
-            <div id="main-menu">
-                <nav class="dropdown" id="dropdown-menu"> <!--flex item-->
-                    <button class="dropbtn">Menu <strong>&#709</strong></button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </nav>
-                <nav class="dropdown" id="dropdown-categories"> <!--flex item-->
-                    <button class="dropbtn">Categories <strong>&#709</strong></button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </nav>
+            <!-- <div id="main-menu"> -->
+                <div id="menu-dropdowns">
+                    <nav class="dropdown" id="dropdown-menu"> <!--flex item-->
+                        <button class="dropbtn">Menu <span class="down-arrow"></span></button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </nav>
+                    <nav class="dropdown" id="dropdown-categories"> <!--flex item-->
+                        <button class="dropbtn">Categories <span class="down-arrow"></span></button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </nav>
+                </div>
+
+                <!--Hamburger menu-->
+                
+
                 <div id="searchbar"> <!--flex item-->
                     <input type="text" placeholder="Search for&hellip;" name="search">
                     <button id="submit" type="submit"><img id="search-icon" src="img/icons/search-icon.svg"></button>
@@ -48,10 +55,10 @@
                     <a class="nav-icon" id="account" href="#"><img src="img/icons/account-icon.svg"></a>
                     <a class="nav-icon" id="basket" href="#"><img src="img/icons/basket-icon.svg"></a>
                 </div>
-            </div>
+            <!-- </div> -->
         </header>
         <!--Carousel-->
-        <section id="carousel" class="main-flex-item">
+        <section id="carousel" class="main-flex-item-content">
             <div id="carousel-text">
                 <h2>Read whenever and wherever it suits you</h2>
                 <p>Feel less stressed and more engaged by taking a few moments for yourself.</p>
@@ -71,7 +78,7 @@
         </section>
 
         <!--Books-->
-        <main id="book-sections-main" class="main-flex-item">
+        <main id="book-sections-main" class="main-flex-item-content">
             <section id="section-product-list-1" class="section-product-list"> <!--One section (1)-->
                 <div class="book-section-category">
                     <h2 class="category-headline">Category</h2>
@@ -484,7 +491,7 @@
         </main>
 
         <!--Reading benefits info-->
-        <section id="why-reading-section" class="main-flex-item">
+        <section id="why-reading-section" class="main-flex-item-content">
             <h2 id="reading-benefits-headline">The power of reading</h2>
             <div id="reading-benefits-info">
                 <div id="benefits-mind" class="benefits-ind">
