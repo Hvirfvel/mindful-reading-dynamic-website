@@ -16,44 +16,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!--Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--JS-->
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <div class="flex-wrapper">
         <!--Header-->
-        <header id="header" class="main-flex-item">
+        <header id="header" class="main-flex-item"> <!--grid-->
             <div id="header-logo">
                 <a href="#"><img src="img/logo/mindful-reading-logo-bigger-dot-blue-blue.svg" alt="Mindful Reading logo"></a>
             </div>
             <!-- <div id="main-menu"> -->
-                <div id="menu-dropdowns">
-                    <nav class="dropdown" id="dropdown-menu"> <!--flex item-->
+                <nav id="main-menu">
+                    <div id="menuToggle" onclick="hamMenu(this)">
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                    </div>
+                    <div id="dropdown-container">
+                      <div class="dropdown" id="dropdown-menu">
                         <button class="dropbtn">Menu <span class="down-arrow"></span></button>
-                        <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                    </nav>
-                    <nav class="dropdown" id="dropdown-categories"> <!--flex item-->
+                        <ul id="menu-ul" class="dropdown-ul">
+                          <a href="#"><li>Link 1</li></a>
+                          <a href="#"><li>Link 2</li></a>
+                          <a href="#"><li>Link 3</li></a>
+                          <a href="#"><li>Link 4</li></a>
+                          <a href="#"><li>Link 5</li></a>
+                        </ul>
+                      </div>
+                      <div class="dropdown" id="dropdown-categories">
                         <button class="dropbtn">Categories <span class="down-arrow"></span></button>
-                        <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                    </nav>
-                </div>
-
-                <!--Hamburger menu-->
-                
+                        <ul id="categories-ul" class="dropdown-ul">
+                          <a href="#"><li>Link 1</li></a>
+                          <a href="#"><li>Link 2</li></a>
+                          <a href="#"><li>Link 3</li></a>
+                          <a href="#"><li>Link 4</li></a>
+                          <a href="#"><li>Link 5</li></a>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
 
                 <div id="searchbar"> <!--flex item-->
                     <input type="text" placeholder="Search for&hellip;" name="search">
-                    <button id="submit" type="submit"><img id="search-icon" src="img/icons/search-icon.svg"></button>
+                    <button id="submit" type="submit"><img id="search-icon" src="img/icons/blue-magnifying-glass.svg"></button>
                 </div>
                 <div id="main-nav-icons"> <!--flex item-->
-                    <a class="nav-icon" id="account" href="#"><img src="img/icons/account-icon.svg"></a>
-                    <a class="nav-icon" id="basket" href="#"><img src="img/icons/basket-icon.svg"></a>
+                    <a class="nav-icon" id="account" href="#"><img src="img/icons/blue-stick-man.svg"></a>
+                    <a class="nav-icon" id="basket" href="#"><img src="img/icons/blue-shopping-basket.svg"></a>
                 </div>
             <!-- </div> -->
         </header>
@@ -564,5 +574,6 @@
         </footer>
 
     </div>
+
 </body>
 </html>
