@@ -25,7 +25,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--main-bg-color);
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
+    background-image: url("../img/footer/mindful-reading-footer-lightgreen.svg");
+    background-repeat: no-repeat;
+    background-position: 0 1530px;
+    background-size: 100% auto;
+}
+
+.flex-wrapper {
+    background-image: url("../img/footer/mindful-reading-footer-mintgreen.svg");
+    background-repeat: no-repeat;
+    background-position: 0 2190px;
+    background-size: 100% auto;
 }
 
 ul {
