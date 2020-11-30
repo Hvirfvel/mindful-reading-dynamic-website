@@ -10,7 +10,8 @@ html {
 
 
 :root {
-    --main-bg-color: #f2f0ef;
+    /* --main-bg-color: #f2f0ef; */
+    --main-bg-color: #fefefe;
     --section-bg-color: #ffffff;
     --main-text-color: #1e2425;
     --primary-brand-color: #bfe5cf;
@@ -24,7 +25,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--main-bg-color);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 ul {

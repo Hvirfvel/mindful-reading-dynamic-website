@@ -1,25 +1,29 @@
 #footer {
     background-color: white;
-    position: relative;
+    background-image: url(../img/footer/mindful-reading-footer-long.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
     font-size: 0.9em;
 }
 
-#footer-bg img {
+/* #footer-bg img {
     position: absolute;
     bottom: 0;
     width: 100%;
-}
+} */
 
 #all-info-footer {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 8% 2em 8%;
+    padding: 200px 8% 2em 8%;
 }
 
 #all-info-footer h4 {
     font-weight: bold;
+    padding-bottom: 1em;
 }
 
 #footer-info-text {
@@ -29,5 +33,14 @@
 }
 
 #shopping, #customer-service {
-    padding: 0 40px;
+    padding-right: 40px;
+}
+
+#social-media-links {
+    display: flex;
+}
+
+#social-media-links img {
+    width: 50px;
+    height: 50px;
 }

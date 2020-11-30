@@ -1,17 +1,116 @@
 #carousel {
     padding: 0 8%;
     padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* #carousel-text {
-    text-align: center;
-} */
+#carousel-text {
+    margin: 0 auto;
+    width: 626px;
+}
 
-#carousel-illustrations {
+#carousel-text h2 {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+#carousel-slider {
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+
+    position: relative;
+}
+
+.carousel-cell {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.carousel-cell img {
+    z-index: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#slide-nav-auto {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slide-nav-auto .btn {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Non responsive */
+
+/* #slides {
+    width: 400%;
+    height: 600px;
     display: flex;
 }
 
 .carousel-cell {
+    width: 100%;
+    transition: 2s;
+}
+
+.carousel-cell img {
+    width: 800px;
+    height: 600px;
+} */
+
+/* manual navigation */
+
+/* #slide-nav-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid var(--secondary-brand-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: var(--secondary-brand-color);
+}
+
+#radio1:checked ~ .first-slide {
+    margin-left: 0;
+}
+#radio2:checked ~ .first-slide {
+    margin-left: -100%;
+}
+#radio3:checked ~ .first-slide {
+    margin-left: -200%;
+} */
+
+
+/* .carousel-cell {
     margin-top: 60px;
     width: 55%;
     height: auto;
@@ -21,4 +120,4 @@
 .carousel-cell:before {
     display: block;
     content: counter(carousel-cell);
-}
+} */
