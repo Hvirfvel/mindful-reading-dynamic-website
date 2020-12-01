@@ -1,19 +1,110 @@
 #footer {
-    /* background-color: white;
-    background-image: url(../img/footer/mindful-reading-footer-long.svg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% auto; */
     font-size: 0.9em;
+    padding: 150px 8% 2em 8%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "shopping customer-service . . social-media social-media";
 }
 
-/* #footer-bg img {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-} */
+#shopping {
+    grid-area: shopping;
+}
+#customer-service {
+    grid-area: customer-service;
+}
+#follow-us {
+    grid-area: social-media;
+    justify-self: end;
+}
 
-#all-info-footer {
+.footer-headline {
+    font-weight: bold;
+    padding-bottom: 0.75em;
+}
+
+#social-media-links {
+    display: flex;
+}
+
+#social-media-links img {
+    width: 40px;
+    height: 40px;
+    
+}
+
+#facebook,
+#instagram {
+    margin-right: 15px;
+}
+
+#footer > * {
+    min-width: 120px
+}
+
+#shopping,
+#customer-service {
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 1078px) {
+    .flex-wrapper {
+        background-position: 0 2480px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flex-wrapper {
+        background-position: 0 2380px;
+    }
+
+    #footer {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "shopping"
+        "customer-service"
+        "social-media";
+        padding-bottom: 3em;
+    }
+    .footer-content {
+        justify-self: center;
+    }
+
+    #follow-us {
+        justify-self: center;
+    }
+
+    #footer h4, li, img {
+        text-align: center;
+    }
+
+    #shopping,
+    #customer-service {
+    margin: 0 0 25px 0;
+}
+}
+
+@media screen and (max-width: 734px) {
+    .flex-wrapper {
+        background-position: 0 2420px;
+    }
+}
+
+@media screen and (max-width: 598px) {
+    .flex-wrapper {
+        background-position: 0 2970px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .flex-wrapper {
+        background-position: 0 3000px;
+    }
+    #footer {
+        padding-top: 100px;
+    }
+}
+
+/* #all-info-footer {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -43,4 +134,4 @@
 #social-media-links img {
     width: 50px;
     height: 50px;
-}
+} */
