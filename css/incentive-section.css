@@ -42,12 +42,80 @@
 
 #incentive-img {
     grid-area: illustration;
-
-    /* margin-left: auto; */
 }
 
 #incentive-img img {
     width: 100%;
     max-width: 700px;
     height: auto;
+}
+
+@media screen and (max-width: 960px) {
+    .incentive-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "headline"
+        "body-text"
+        "illustration";
+
+        margin-top: 50px;
+    }
+    #incentive-headline,
+    #incentive-text,
+    #incentive-img {
+        margin: 0 auto;
+    }
+
+    #incentive-text {
+        padding-right: 0;
+        padding-bottom: 2em;
+        text-align: center;
+    }
+
+    #incentive-text p {
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+    }
+}
+
+#bg-img-top {
+    background-image: url("../img/background/green-bg-top.svg");
+    background-repeat: no-repeat;
+    background-position: 0 277px;
+    background-size: 100% auto;
+}
+
+@media screen and (max-width: 1280px) {
+    .incentive-content {
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #incentive-headline {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    #bg-img-top {
+        background-image: url("../img/background/green-bg-top-mobile.svg");
+        /* background-repeat: no-repeat; */
+        background-position: 0 247px;
+        /* background-size: 100% auto; */
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #incentive-headline {
+        max-width: 368px;
+    }
+
+    #incentive-text p {
+        max-width: 372px;
+    }
+
+    #bg-img-top {
+        background-position: 0 310px;
+    }
 }

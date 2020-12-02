@@ -1,9 +1,6 @@
 /* Why Reading */
 #why-reading-section {
-    /* margin: 0 8%; */
     margin-top: 240px;
-    /* padding-bottom: 100px; */
-    /* background-color: white; */
 }
 
 #reading-benefits-headline {
@@ -35,17 +32,11 @@
 }
 
 .benefits-ind {
-    /* width: 220px; */
     display: flex;
     flex-direction: column;
-    /* flex-grow: 1; */
     flex: 1 1 220px;
     padding: 40px 15px 0 15px;
 }
-
-/* .benefits-ind:not(:last-child) {
-    padding-right: 30px;
-} */
 
 .benefits-text {
     margin: 0 auto;
@@ -81,14 +72,14 @@
         max-width: 770px;
     }
 
-    .body {
-        background-position: 0 2400px;
+    body {
+        background-position: 0 1450px;
     }
 }
 
 @media screen and (max-width: 960px) {
-    .body {
-        background-position: 0 1400px;
+    body {
+        background-position: 0 1500px;
     }
 }
 
@@ -98,5 +89,14 @@
     }
     #reading-benefits-headline {
         font-size: 1.75em;
+    }
+    body {
+        background-position: 0 1400px;
+    }
+}
+
+@media screen and (max-width: 534px) {
+    body {
+        background-position: 0 1350px;
     }
 }

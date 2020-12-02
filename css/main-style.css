@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
     background-image: url("../img/background/mindful-reading-footer-lightgreen.svg");
     background-repeat: no-repeat;
-    background-position: 0 1620px;
+    background-position: 0 1520px;
     background-size: 100% auto;
 }
 
@@ -36,13 +36,6 @@ body {
     background-image: url("../img/background/mindful-reading-footer-mintgreen.svg");
     background-repeat: no-repeat;
     background-position: 0 2290px;
-    background-size: 100% auto;
-}
-
-#bg-img-top {
-    background-image: url("../img/background/green-bg-top.svg");
-    background-repeat: no-repeat;
-    background-position: 0 277px;
     background-size: 100% auto;
 }
 
