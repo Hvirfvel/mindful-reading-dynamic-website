@@ -82,7 +82,13 @@
     }
 
     .body {
-        background-position: 0 2490px;
+        background-position: 0 2400px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .body {
+        background-position: 0 1400px;
     }
 }
 

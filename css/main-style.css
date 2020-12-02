@@ -26,16 +26,23 @@ body {
     padding: 0;
     background-color: var(--main-bg-color);
     overflow-x: hidden;
-    background-image: url("../img/footer/mindful-reading-footer-lightgreen.svg");
+    background-image: url("../img/background/mindful-reading-footer-lightgreen.svg");
     background-repeat: no-repeat;
-    background-position: 0 1530px;
+    background-position: 0 1620px;
     background-size: 100% auto;
 }
 
 .flex-wrapper {
-    background-image: url("../img/footer/mindful-reading-footer-mintgreen.svg");
+    background-image: url("../img/background/mindful-reading-footer-mintgreen.svg");
     background-repeat: no-repeat;
-    background-position: 0 2190px;
+    background-position: 0 2290px;
+    background-size: 100% auto;
+}
+
+#bg-img-top {
+    background-image: url("../img/background/green-bg-top.svg");
+    background-repeat: no-repeat;
+    background-position: 0 277px;
     background-size: 100% auto;
 }
 
@@ -71,7 +78,7 @@ button {
 }
 
 /* Huvudstruktur */
-#flex-wrapper {
+.flex-wrapper {
     display: flex;
     flex-direction: column;
 }

@@ -55,6 +55,8 @@
 .dropbtn {
     border: none;
     background-color: transparent;
+    font-weight: 500;
+    position: relative;
 }
 
 .dropbtn, .dropdown-ul li {
@@ -66,13 +68,27 @@
     display: none;
     position: absolute;
     background-color: white;
-    width: 100%;
+    width: 150px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 2px 3px #d8d8d8;
+    z-index: 100;
+    border-radius: 5px;
+}
+
+.dropdown-ul li {
+    padding: 0.3em 0;
+    text-align: center;
 }
 
 .dropdown-ul a,
 .dropdown:hover .dropdown-ul {
     display: block;
 }
+
+/* #menu-ul {
+    right: 0.001%;
+} */
 
 /* Searchbar */
 #searchbar {
@@ -284,11 +300,21 @@
         pointer-events: none;
     }
 
+    #dropdown-menu {
+        padding: 0;
+    }
+
     .dropdown,
     .dropdown-ul {
         display: block;
         position: relative;
         padding: 0;
+        
+    }
+
+    .dropdown-ul {
+        width: 100%;
+        box-shadow: none;
     }
 
     #menu-ul li,
@@ -313,5 +339,6 @@
 
     #categories-ul li {
         padding: 0.6em 0;
+        text-align: left;
     }
 }
