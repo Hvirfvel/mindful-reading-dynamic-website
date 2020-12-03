@@ -33,6 +33,7 @@
 #incentive-text p {
     padding-bottom: 1.5em;
     width: 280px;
+    font-size: 1em;
 }
 
 #incentive-text a {
@@ -92,6 +93,13 @@
     }
 }
 
+/* @media screen and (max-width: 960px) {
+    #bg-img-top {
+        background-image: url("../img/background/green-bg-top-mobile.svg");
+        background-position: 0 207px;
+    }
+} */
+
 @media screen and (max-width: 768px) {
     #incentive-headline {
         font-size: 1.2em;
@@ -100,9 +108,7 @@
 
     #bg-img-top {
         background-image: url("../img/background/green-bg-top-mobile.svg");
-        /* background-repeat: no-repeat; */
         background-position: 0 247px;
-        /* background-size: 100% auto; */
     }
 }
 

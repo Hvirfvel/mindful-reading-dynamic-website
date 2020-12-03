@@ -66,6 +66,14 @@
     font-weight: 500;
 }
 
+/* Background */
+body {
+    background-image: url("../img/background/mindful-reading-footer-lightgreen.svg");
+    background-repeat: no-repeat;
+    background-position: 0 1520px;
+    background-size: 100% auto;
+}
+
 @media screen and (max-width: 1076px) {
     #reading-benefits-info,
     #benefits-link {

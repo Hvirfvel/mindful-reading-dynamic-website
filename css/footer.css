@@ -49,9 +49,17 @@
     margin-right: 30px;
 }
 
+/* Background */
+.flex-wrapper {
+    background-image: url("../img/background/mindful-reading-footer-mintgreen.svg");
+    background-repeat: no-repeat;
+    background-position: 0 2290px;
+    background-size: 100% auto;
+}
+
 /* Hover */
 #social-media-links svg:hover {
-    fill: #fa8072;
+    fill: var(--secondary-brand-color);
 }
 
 @media screen and (max-width: 1280px) {
