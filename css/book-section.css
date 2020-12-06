@@ -30,17 +30,20 @@
 }
 
 /* Stylar alla böcker relativt till varandra */
+
 .book-section {
     display: flex;
     justify-content: space-evenly;
     width: 1100px;
     /* margin-top: 26px; */
-    margin: 26px auto 0 auto;
+    /* margin: 26px auto 0 auto; */
+    margin: 26px 78px 0 78px;
 }
 
 .one-book {
     /* margin: 0 30px; */
     max-width: 150px;
+    margin-right: 70px;
 }
 
 .book-image-container {
@@ -147,3 +150,22 @@
     height: auto;
 }
     
+@media screen and (max-width: 960px) {
+    #browse-cat h2 {
+        font-size: 24px;
+    }
+
+    .book-section {
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #browse-cat h2 {
+        font-size: 18px;
+        text-decoration: underline;
+    }
+    #browse-cat img {
+        display: none;
+    }
+}

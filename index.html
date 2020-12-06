@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!--Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" defer></script>
     <!--JS-->
     <script src="js/main.js" defer></script>
 </head>
@@ -23,9 +25,6 @@
     <div class="flex-wrapper">
         <!--Header-->
         <header id="header" class="main-flex-item"> <!--grid-->
-            <div id="header-logo">
-                <a href="#"><img src="img/logo/mindful-reading-logo-bigger-dot-original-colors.svg" alt="Mindful Reading logo"></a>
-            </div>
             <!-- <div id="main-menu"> -->
                 <nav id="main-menu">
                     <div id="menuToggle">
@@ -56,13 +55,22 @@
                       </div>
                     </div>
                   </nav>
+                   <!--Logo-->
+                  <div id="header-logo">
+                    <a href="#">
+                        <img src="img/logo/mindful-reading-logo-bigger-dot-original-colors.svg" alt="Mindful Reading logo">
+                    </a>
+                </div>
 
                 <div id="searchbar"> <!--flex item-->
                     <input type="text" placeholder="Search for&hellip;" name="search">
-                    <a href="#" id="searchbar-nav">
-                        <button id="submit" type="submit"><img id="search-icon" src="img/icons/001-magnifying-glass.svg"></button>
+                    <!-- <a href="#" id="searchbar-nav"> -->
+                    <button id="submit" type="button">
+                        <img id="search-icon" src="img/icons/001-magnifying-glass.svg">
                         <p>Search</p>
-                    </a>
+                    </button>
+                        
+                    <!-- </a> -->
                 </div>
                 <div id="main-nav-icons"> <!--flex item-->
                     <a class="nav-icon" id="account" href="#">
@@ -277,7 +285,7 @@
                     </div>
                 </div>
             </div>
-            <a id="benefits-link" href="#">Read more ></a>
+            <a id="benefits-link" href="#">Read more</a>
         </section>
 
         <!--Footer-->
@@ -307,13 +315,13 @@
                     <h4 class="footer-headline">Follow Us</h4>
                     <div id="social-media-links">
                         <a href="#">
-                            <svg class="facebook" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.6 512"><path d="M179.5,512h-82a24.86,24.86,0,0,1-24.84-24.84V302.23H24.84A24.88,24.88,0,0,1,0,277.39V198.14a24.86,24.86,0,0,1,24.84-24.83H72.67V133.62c0-39.34,12.36-72.82,35.73-96.8S164.68,0,203.28,0l62.53.1A24.87,24.87,0,0,1,290.6,24.94V98.52a24.86,24.86,0,0,1-24.83,24.83h-42.1c-12.84,0-16.11,2.57-16.81,3.36-1.15,1.31-2.52,5-2.52,15.22V173.3h58.27a25.24,25.24,0,0,1,12.29,3.13,24.9,24.9,0,0,1,12.78,21.72v79.24a24.86,24.86,0,0,1-24.83,24.83H204.34V487.16A24.86,24.86,0,0,1,179.5,512Zm-76.81-30h71.63V288.79a16.6,16.6,0,0,1,16.58-16.58h66.73V203.32H190.9a16.6,16.6,0,0,1-16.58-16.58V142c0-11.72,1.19-25.06,10-35.08C195,94.8,211.87,93.4,223.62,93.4h36.93V30.11L203.25,30c-62,0-100.56,39.7-100.56,103.6v53.12A16.6,16.6,0,0,1,86.11,203.3H30v68.89H86.11a16.6,16.6,0,0,1,16.58,16.58Z" fill="#1e2425"/></svg>
+                            <svg class="facebook" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.6 512"><path d="M179.5,512h-82a24.86,24.86,0,0,1-24.84-24.84V302.23H24.84A24.88,24.88,0,0,1,0,277.39V198.14a24.86,24.86,0,0,1,24.84-24.83H72.67V133.62c0-39.34,12.36-72.82,35.73-96.8S164.68,0,203.28,0l62.53.1A24.87,24.87,0,0,1,290.6,24.94V98.52a24.86,24.86,0,0,1-24.83,24.83h-42.1c-12.84,0-16.11,2.57-16.81,3.36-1.15,1.31-2.52,5-2.52,15.22V173.3h58.27a25.24,25.24,0,0,1,12.29,3.13,24.9,24.9,0,0,1,12.78,21.72v79.24a24.86,24.86,0,0,1-24.83,24.83H204.34V487.16A24.86,24.86,0,0,1,179.5,512Zm-76.81-30h71.63V288.79a16.6,16.6,0,0,1,16.58-16.58h66.73V203.32H190.9a16.6,16.6,0,0,1-16.58-16.58V142c0-11.72,1.19-25.06,10-35.08C195,94.8,211.87,93.4,223.62,93.4h36.93V30.11L203.25,30c-62,0-100.56,39.7-100.56,103.6v53.12A16.6,16.6,0,0,1,86.11,203.3H30v68.89H86.11a16.6,16.6,0,0,1,16.58,16.58Z"/></svg>
                         </a>
                         <a href="#">
-                            <svg class="instagram" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M437,0H75A75.09,75.09,0,0,0,0,75V437a75.09,75.09,0,0,0,75,75H437a75.08,75.08,0,0,0,75-75V75A75.09,75.09,0,0,0,437,0Zm45,437a45.05,45.05,0,0,1-45,45H75a45.05,45.05,0,0,1-45-45V75A45.05,45.05,0,0,1,75,30H437a45.05,45.05,0,0,1,45,45Z" fill="#1e2425"/><path d="M421,61a30,30,0,1,0,30,30A30,30,0,0,0,421,61Z" fill="#1e2425"/><path d="M256,121c-74.44,0-135,60.56-135,135s60.56,135,135,135,135-60.56,135-135S330.44,121,256,121Zm0,240A105,105,0,1,1,361,256,105,105,0,0,1,256,361Z" fill="#1e2425"/></svg>
+                            <svg class="instagram" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M437,0H75A75.09,75.09,0,0,0,0,75V437a75.09,75.09,0,0,0,75,75H437a75.08,75.08,0,0,0,75-75V75A75.09,75.09,0,0,0,437,0Zm45,437a45.05,45.05,0,0,1-45,45H75a45.05,45.05,0,0,1-45-45V75A45.05,45.05,0,0,1,75,30H437a45.05,45.05,0,0,1,45,45Z"/><path d="M421,61a30,30,0,1,0,30,30A30,30,0,0,0,421,61Z"/><path d="M256,121c-74.44,0-135,60.56-135,135s60.56,135,135,135,135-60.56,135-135S330.44,121,256,121Zm0,240A105,105,0,1,1,361,256,105,105,0,0,1,256,361Z"/></svg>
                         </a>
                         <a href="#">
-                            <svg class="linkedin" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 507.86"><path d="M7.81,507.86H140.38V159.25H7.81Zm30-318.61h72.57V477.86H37.81Z" transform="translate(0)" fill="#1e2425"/><path d="M74.1,0a74.1,74.1,0,1,0,74.1,74.1h0A74.18,74.18,0,0,0,74.1,0ZM30,74.09a44.1,44.1,0,1,1,44.1,44.1A44.09,44.09,0,0,1,30,74.09Z" transform="translate(0)" fill="#1e2425"/><path d="M511.68,268.72C507,200.86,450.36,148.58,380.19,148.58a131.74,131.74,0,0,0-84.36,30.27v-19.6h-127V507.86H301.37V317.2a39,39,0,0,1,77.94-3.06q.06,1.53,0,3.06l.13,190.65H512V269ZM271.37,477.86H198.8V189.25h67V232.1l24,.14,4.46-6.93a101.73,101.73,0,0,1,85.9-46.73c55.84,0,100.54,42.6,101.78,97v202.3H409.42l-.11-160.66a69,69,0,0,0-137.94,0Z" transform="translate(0)" fill="#1e2425"/></svg>
+                            <svg class="linkedin" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 507.86"><path d="M7.81,507.86H140.38V159.25H7.81Zm30-318.61h72.57V477.86H37.81Z" transform="translate(0)"/><path d="M74.1,0a74.1,74.1,0,1,0,74.1,74.1h0A74.18,74.18,0,0,0,74.1,0ZM30,74.09a44.1,44.1,0,1,1,44.1,44.1A44.09,44.09,0,0,1,30,74.09Z" transform="translate(0)"/><path d="M511.68,268.72C507,200.86,450.36,148.58,380.19,148.58a131.74,131.74,0,0,0-84.36,30.27v-19.6h-127V507.86H301.37V317.2a39,39,0,0,1,77.94-3.06q.06,1.53,0,3.06l.13,190.65H512V269ZM271.37,477.86H198.8V189.25h67V232.1l24,.14,4.46-6.93a101.73,101.73,0,0,1,85.9-46.73c55.84,0,100.54,42.6,101.78,97v202.3H409.42l-.11-160.66a69,69,0,0,0-137.94,0Z" transform="translate(0)"/></svg>
                         </a>
                     </div>
                 </div>

@@ -20,8 +20,8 @@ function toggleCategories() {
     categoriesMenu.classList.toggle("show");
 }
 
-// Searchbar desktop
-let searchDesktop = document.getElementById("searchbar-nav");
+// Searchbar desktop med jQuery
+/* let searchDesktop = document.getElementById("searchbar-nav");
 let searchInput = document.querySelector("#searchbar input")
 
 searchDesktop.addEventListener("click", showSearchInput);
@@ -29,8 +29,128 @@ searchDesktop.addEventListener("click", showSearchInput);
 function showSearchInput() {
     searchDesktop.classList.add("show");
     searchInput.classList.add("show");
+} */
+
+// #######################//////////////
+let searchBtn = document.getElementById("submit");
+let searchBarClicked;
+
+searchBtn.addEventListener("click", toggleSearch);
+
+function toggleSearch() {
+    
+    searchBarClicked = true;
+
+    $('#searchbar').each(function() {
+        $(this).replaceWith($('<form>' + this.innerHTML + '</form>'));
+      });
+      $('#submit').attr("type", "submit").addClass("active");
+      $('#header form').attr("id", "searchbar").addClass("active");
+      $('#searchbar input').addClass("active");
+
+      $('#main-menu').toggleClass("hide");
+      $('#header-logo').toggleClass("hide");
+
+      //Hide elements
+      $(document).click(function(event) {
+        console.log(searchBarClicked); 
+        var $target = $(event.target);
+        if(!$target.closest('#searchbar').length && 
+        $('#searchbar input').is(":visible")) {
+            searchBarClicked = false;
+    
+            if (!searchBarClicked) {
+                $('#searchbar').removeClass("active");
+                $('#searchbar input').removeClass("active");
+                $('#submit').attr("type", "button").removeClass("active");
+                $('#main-menu').removeClass("hide");
+                $('#header-logo').removeClass("hide");
+    
+                $('#header form').each(function() {
+                    $(this).replaceWith($('<div id="searchbar">' + this.innerHTML + '</div>'));
+                });
+            }
+        }        
+      });
 }
 
+
+
+///////////////////////////////
+/* var searchBarClicked;
+
+$(document).ready(function(){
+    $("#searchbar-nav").click(function(){
+        searchBarClicked = true;
+        $("#searchbar").addClass("active");
+        $("#searchbar input").addClass("active");
+        $("#searchbar-nav").addClass("active");
+        $("#searchbar-nav p").addClass("active");
+        $("#searchbar button#submit").addClass("active");
+    });
+}); */
+/////////////////////////////////
+
+//jQuery to close on outside click
+/* $(document).on('click', function (closeElement){
+    if($(closeElement.target).closest("#searchbar").length == 0) {
+        $("#searchbar").removeClass("active hide");
+    }
+}); */
+
+/////////////////////////////////////
+//js solution
+/* let searchContainer = document.getElementById('searchbar');
+let searchInput = document.querySelector("#searchbar input");
+let searchNav = document.getElementById("searchbar-nav");
+let searchNavP = document.querySelector("#searchbar-nav p");
+let searchBtn = document.querySelector("#searchbar button#submit");
+
+var allInSearch = [searchContainer, searchInput, searchNav, searchNavP, searchBtn];
+
+document.addEventListener('click', hideElement);
+
+function hideElement(event) {
+    console.log(searchBarClicked);
+    
+            if (!searchBarClicked) { 
+                
+                for (var i = 0; i < allInSearch.length; i++) {
+                    var isClickInside = allInSearch[i].contains(event.target);
+                
+                    
+                
+                        if (!isClickInside) {
+                            allInSearch[i].classList.remove("active");
+                        }
+            }
+  }
+  searchBarClicked = false;
+} */
+//////////////////////////////////
+
+
+/* document.addEventListener('click', function(event) {
+  var isClickInside = elementToClose.contains(event.target);
+
+  if (!isClickInside) {
+    elementToClose.classList.remove("active");
+  }
+}); */
+
+
+
+
+
+/* Searchbar tablet/ mobile */
+/* let searchInput = document.querySelector("#searchbar input"); */
+/* let searchBtn = document.querySelector("#searchbar-nav");
+
+searchInput.addEventListener("click", toggleSearchBtn);
+
+function toggleSearchBtn() {
+    searchBtn.classList.add("green-btn");
+} */
 
 
 
