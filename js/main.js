@@ -33,13 +33,18 @@ function showSearchInput() {
 
 // #######################//////////////
 let searchBtn = document.getElementById("submit");
-let searchBarClicked;
+/* let searchBarClicked; */
 
 searchBtn.addEventListener("click", toggleSearch);
 
+
+
+
+
+
 function toggleSearch() {
     
-    searchBarClicked = true;
+    /* searchBarClicked = true; */
 
     $('#searchbar').each(function() {
         $(this).replaceWith($('<form>' + this.innerHTML + '</form>'));
@@ -48,20 +53,22 @@ function toggleSearch() {
       $('#header form').attr("id", "searchbar").addClass("active");
       $('#searchbar input').addClass("active");
 
-      $('#main-menu').toggleClass("hide");
-      $('#header-logo').toggleClass("hide");
+      $('#main-menu').addClass("hide");
+      $('#header-logo').addClass("hide");
+      console.log("hej"); 
 
-      //Hide elements
-      $(document).click(function(event) {
-        console.log(searchBarClicked); 
+            //Hide elements
+    
+    const outsideClicklistener = (event) => {
+        /* console.log(searchBarClicked);  */
         var $target = $(event.target);
+        /* searchBarClicked = false; */
         if(!$target.closest('#searchbar').length && 
         $('#searchbar input').is(":visible")) {
-            searchBarClicked = false;
-    
-            if (!searchBarClicked) {
+            
+            /* if (!searchBarClicked) { */
                 $('#searchbar').removeClass("active");
-                $('#searchbar input').removeClass("active");
+                $('#searchbar input').removeClass("active"  );
                 $('#submit').attr("type", "button").removeClass("active");
                 $('#main-menu').removeClass("hide");
                 $('#header-logo').removeClass("hide");
@@ -69,13 +76,19 @@ function toggleSearch() {
                 $('#header form').each(function() {
                     $(this).replaceWith($('<div id="searchbar">' + this.innerHTML + '</div>'));
                 });
-            }
-        }        
-      });
-}
+            /* } */
+            removeDocClickListener();
+        }
+    }; 
+    
+    console.log("hu")
 
-
-
+    const removeDocClickListener = () => {
+        document.removeEventListener("click", outsideClicklistener)
+    }
+     
+    $(document).click(outsideClicklistener) 
+};
 ///////////////////////////////
 /* var searchBarClicked;
 
@@ -153,4 +166,23 @@ function toggleSearchBtn() {
 } */
 
 
+//###########################
+// Searchbar on max-width 960px
+let windowSize = window.matchMedia("(max-width: 960px");
+
+function searchSmallerMedia(windowSize) {
+    if (windowSize.matches) {
+        $('#searchbar').each(function() {
+            $(this).replaceWith($('<form id="searchbar">' + this.innerHTML + '</form>'));
+          });
+        $('#submit').attr("type", "submit");
+
+    }
+}
+
+
+
+windowSize.addListener(searchSmallerMedia);
+
+searchSmallerMedia(windowSize);
 

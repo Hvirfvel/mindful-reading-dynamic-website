@@ -1,10 +1,8 @@
-.section-product-list {
-    /* padding: 0 8%; */
+/* .section-product-list {
     padding-top: 45px;
     width: 100%;
     margin-bottom: 100px;
-    
-}
+} */
 
 /* #section-product-list-2 {
     background-color: var(--section-bg-color);
@@ -12,6 +10,9 @@
 
 #section-product-list-3 {
     margin-bottom: 0;
+    padding-top: 45px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .book-section-category {
