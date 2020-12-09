@@ -39,6 +39,12 @@
 #incentive-text a {
     text-decoration: underline;
     font-size: 0.9em;
+    font-weight: 500;
+    opacity: 0.75;
+}
+
+#incentive-text a:hover {
+    opacity: 1;
 }
 
 #incentive-img {

@@ -17,6 +17,7 @@ html {
     --primary-brand-color: #bfe5cf;
     --secondary-brand-color: #4D64A8;
     --tertiary-brand-color: #0F225C;
+    --decoration-brand-color: #FA8072;
     
 }
 
@@ -39,6 +40,10 @@ li, a {
 
 li {
     list-style-type: none;
+}
+
+p, a, button, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Heebo', sans-serif;
 }
 
 a {
