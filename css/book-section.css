@@ -12,7 +12,8 @@
     margin-bottom: 0;
     padding-top: 45px;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
 }
 
 .book-section-category {
@@ -30,21 +31,59 @@
     padding-right: 50px;
 }
 
-/* Stylar alla böcker relativt till varandra */
+/* Carousel */
 
-.book-section {
-    display: flex;
-    justify-content: space-evenly;
-    width: 1100px;
-    /* margin-top: 26px; */
-    /* margin: 26px auto 0 auto; */
-    margin: 26px 78px 0 78px;
+.carousel-container {
+    width: 76%;
+    margin: 26px auto 0 auto;
+    overflow: hidden;
+    border: 1px solid #333;
 }
 
+.book-section-slide {
+    display: flex;
+    width: 100%;
+    border: 1px solid red;
+    /* margin-top: 26px; */
+    /* margin: 26px auto 0 auto; */
+    /* margin: 26px 78px 0 78px; */
+}
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 45%;
+    z-index: 10;
+    cursor: pointer;
+
+    height: 80px;
+    width: 60px;
+}
+
+#prevBtn {
+    left: 5%;
+}
+
+#nextBtn {
+    right: 5%;
+}
+
+#prevBtn svg,
+#nextBtn svg {
+    width: 40px;
+    opacity: 0.7;
+}
+
+#prevBtn svg:hover,
+#nextBtn svg:hover {
+    opacity: 1;
+}
+
+
+/* Each book*/
 .one-book {
     /* margin: 0 30px; */
-    max-width: 150px;
-    margin-right: 70px;
+    max-width: 220px;
+    padding: 0 35px;
 }
 
 .book-image-container {
@@ -125,7 +164,7 @@
     background-color: var(--primary-brand-color);
     padding: 0.75em 0;
     border: none;
-    border-radius: 24px;
+    border-radius: 6px;
     width: 100%;
 }
 
@@ -156,9 +195,26 @@
         font-size: 24px;
     }
 
-    .book-section {
-        overflow-x: scroll;
+    .carousel-container {
+        width: 95%;
+        margin: 26px 0 0 5%;
+
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
+
+    .one-book {
+        padding: 0 20px;
+    }
+
+    #prevBtn,
+    #nextBtn {
+        display: none;
+    }
+
+    /* .book-section-slide {
+        overflow-x: scroll;
+    } */
 }
 
 @media screen and (max-width: 660px) {

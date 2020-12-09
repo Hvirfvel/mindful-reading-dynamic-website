@@ -105,142 +105,330 @@
             
             <section id="section-product-list-3" class="section-product-list"> <!--One section (3)-->
                 <div class="book-section-category">
-                    <h2 class="category-headline">Category</h2>
+                    <h2 class="category-headline">Bestsellers</h2>
                     <a class="category-show-all" href="#">Show all</a>
                 </div>
 
+                <div class="buttons">
+                    <button id="prevBtn">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 289.04 492">
+                            <path d="M198.61,246.1,382.66,62a27,27,0,0,0,0-38.06L366.54,7.86a27,27,0,0,0-38.06,0L109.33,227a27.15,27.15,0,0,0,0,38.19L328.27,484.14a27,27,0,0,0,38.07,0L382.46,468a27,27,0,0,0,0-38.06Z" transform="translate(-101.48)"/>
+                          </svg>                          
+                    </button>
+                    <button id="nextBtn">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 289.05 492">
+                            <path d="M382.68,226.8,163.73,7.86a27,27,0,0,0-38.06,0L109.54,24a27,27,0,0,0,0,38.06L293.4,245.9,109.34,430a27,27,0,0,0,0,38.07l16.12,16.11a27,27,0,0,0,38.07,0L382.68,265a27.16,27.16,0,0,0,0-38.2Z" transform="translate(-101.48)"/>
+                          </svg>
+                    </button>
+                </div>
                 <div class="carousel-container">
-                <div class="book-section"> <!--All books in one section-->
-                    <div class="one-book"> <!--One book-->
-                        <div class="book-image-container">
-                            <img src="img/books/9780241425442.jpg" alt="" class="book-image" id="book1">
-                        </div>
-                        <div class="book-info-rating">
-                            <div class="book-info">
-                                <h3 class="book-title">The Thursday Murder Club</h3>
-                                <h4 class="book-author">Author</h4>
+                    <div class="book-section-slide"> <!--All books in one section-->
+                        
+                        <!--One book Clone of 10-->
+                        <!-- <div class="one-book" id="lastClone"> 
+                            <div class="book-image-container">
+                                <img src="img/books/9781838770013.jpg" alt="" class="book-image">
                             </div>
-                            <footer class="book-footer">
-                                <div class="book-rating">
-                                    <div class="book-rating-stars">
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <p class="book-rating-num">3,9 (145)</p>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">The beekeeper of Aleppo</h3>
+                                    <h4 class="book-author">Christy Lefteri</h4>
                                 </div>
-                                <h3 class="book-price">£6.99</h3>
-                                <button class="add-btn">Add</button>
-                            </footer>
-                        </div>
-                    </div>
-                    <div class="one-book"> <!--One book-->
-                        <div class="book-image-container">
-                            <img src="img/books/9780241425442.jpg" alt="" class="book-image" id="book1">
-                        </div>
-                        <div class="book-info-rating">
-                            <div class="book-info">
-                                <h3 class="book-title">Title</h3>
-                                <h4 class="book-author">Author</h4>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
                             </div>
-                            <footer class="book-footer">
-                                <div class="book-rating">
-                                    <div class="book-rating-stars">
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <p class="book-rating-num">3,9 (145)</p>
-                                </div>
-                                <h3 class="book-price">£6.99</h3>
-                                <button class="add-btn">Add</button>
-                            </footer>
-                        </div>
-                    </div>
-                    <div class="one-book"> <!--One book-->
-                        <div class="book-image-container">
-                            <img src="img/books/9780241425442.jpg" alt="" class="book-image" id="book1">
-                        </div>
-                        <div class="book-info-rating">
-                            <div class="book-info">
-                                <h3 class="book-title">The Thursday Murder Club</h3>
-                                <h4 class="book-author">Author</h4>
+                        </div> -->
+                        <div class="one-book"> <!--One book  1-->
+                            <div class="book-image-container">
+                                <img src="img/books/2928377041175.jpg" alt="" class="book-image" id="book1">
                             </div>
-                            <footer class="book-footer">
-                                <div class="book-rating">
-                                    <div class="book-rating-stars">
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <p class="book-rating-num">3,9 (145)</p>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">The Searcher</h3>
+                                    <h4 class="book-author">Tana French</h4>
                                 </div>
-                                <h3 class="book-price">£6.99</h3>
-                                <button class="add-btn">Add</button>
-                            </footer>
-                        </div>
-                    </div>
-                    <div class="one-book"> <!--One book-->
-                        <div class="book-image-container">
-                            <img src="img/books/9780241425442.jpg" alt="" class="book-image" id="book1">
-                        </div>
-                        <div class="book-info-rating">
-                            <div class="book-info">
-                                <h3 class="book-title">The Thursday Murder Club</h3>
-                                <h4 class="book-author">Author</h4>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
                             </div>
-                            <footer class="book-footer">
-                                <div class="book-rating">
-                                    <div class="book-rating-stars">
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <p class="book-rating-num">3,9 (145)</p>
-                                </div>
-                                <h3 class="book-price">£6.99</h3>
-                                <button class="add-btn">Add</button>
-                            </footer>
                         </div>
-                    </div>
-                    <div class="one-book"> <!--One book-->
-                        <div class="book-image-container">
-                            <img src="img/books/9781786892706.jpg" alt="" class="book-image">
-                        </div>
-                        <div class="book-info-rating">
-                            <div class="book-info">
-                                <h3 class="book-title">The Midnight Library</h3>
-                                <h4 class="book-author">Matt Haig</h4>
+                        <div class="one-book"> <!--One book  2-->
+                            <div class="book-image-container">
+                                <img src="img/books/9780241425442.jpg" alt="" class="book-image" id="book1">
                             </div>
-                            <footer class="book-footer">
-                                <div class="book-rating">
-                                    <div class="book-rating-stars">
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star" id="checked"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <p class="book-rating-num">3,9 (145)</p>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">The Thursday Murder Club</h3>
+                                    <h4 class="book-author">Richard Osman</h4>
                                 </div>
-                                <h3 class="book-price">£6.99</h3>
-                                <button class="add-btn">Add</button>
-                            </footer>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
                         </div>
-                    </div>
-                    
-                </div> <!--Book section end-->
+                        <div class="one-book"> <!--One book  3-->
+                            <div class="book-image-container">
+                                <img src="img/books/9780241491515.jpg" alt="" class="book-image" id="book1">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">A promised land</h3>
+                                    <h4 class="book-author">Barack Obama</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="one-book"> <!--One book  4-->
+                            <div class="book-image-container">
+                                <img src="img/books/9780241984994.jpg" alt="" class="book-image" id="book1">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">Girl, Woman, Other</h3>
+                                    <h4 class="book-author">Bernardine Evaristo</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="one-book"> <!--One book  5-->
+                            <div class="book-image-container">
+                                <img src="img/books/9780571367863.jpg" alt="" class="book-image">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">Normal people</h3>
+                                    <h4 class="book-author">The Scripts</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="one-book"> <!--One book  6-->
+                            <div class="book-image-container">
+                                <img src="img/books/9781472154668.jpg" alt="" class="book-image" id="book1">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">Where the crawdads sing</h3>
+                                    <h4 class="book-author">Delia Owens</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="one-book"> <!--One book  7-->
+                            <div class="book-image-container">
+                                <img src="img/books/9781529004328.jpg" alt="" class="book-image" id="book1">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">Find them dead</h3>
+                                    <h4 class="book-author">Peter James</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="one-book"> <!--One book  8-->
+                            <div class="book-image-container">
+                                <img src="img/books/9781786892706.jpg" alt="" class="book-image" id="book1">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">The Midnight Library</h3>
+                                    <h4 class="book-author">Matt Haig</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="one-book"> <!--One book  9-->
+                            <div class="book-image-container">
+                                <img src="img/books/9781788403078.jpg" alt="" class="book-image" id="book1">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">Women don't owe you pretty</h3>
+                                    <h4 class="book-author">Florence Given</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="one-book"> <!--One book  10-->
+                            <div class="book-image-container">
+                                <img src="img/books/9781838770013.jpg" alt="" class="book-image">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">The beekeeper of Aleppo</h3>
+                                    <h4 class="book-author">Christy Lefteri</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div>
+                        <!--One book Clone of  1-->
+                        <!-- <div class="one-book" id="firstClone"> 
+                            <div class="book-image-container">
+                                <img src="img/books/2928377041175.jpg" alt="" class="book-image" id="book1">
+                            </div>
+                            <div class="book-info-rating">
+                                <div class="book-info">
+                                    <h3 class="book-title">The Searcher</h3>
+                                    <h4 class="book-author">Tana French</h4>
+                                </div>
+                                <footer class="book-footer">
+                                    <div class="book-rating">
+                                        <div class="book-rating-stars">
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star" id="checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <p class="book-rating-num">3,9 (145)</p>
+                                    </div>
+                                    <h3 class="book-price">£6.99</h3>
+                                    <button class="add-btn">Add</button>
+                                </footer>
+                            </div>
+                        </div> -->
+                        
+                    </div> <!--Book section end-->
                 </div> <!--Carousel container end-->
-                <button id="prevBtn">Prev</button>
-                <button id="nextBtn">Next</button>
             </section>
             <div class="section-product-list" id="browse-cat">
                 <a href="#"><h2>Browse your favourite categories..</h2></a>

@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    width: 100%;
+    /* width: 100%; */
     margin: 0;
     padding: 0;
     background-color: var(--main-bg-color);
@@ -57,6 +57,8 @@ p {
 
 button {
     padding: 0;
+    border: none;
+    background-color: transparent;
 }
 
 /* Huvudstruktur */
