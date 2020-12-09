@@ -20,7 +20,7 @@
     display: flex;
     align-items: baseline;
     margin: 0 auto;
-    padding-left: 58px;
+    padding-left: 35px;
     width: 1100px;
 }
 
@@ -34,16 +34,16 @@
 /* Carousel */
 
 .carousel-container {
-    width: 76%;
+    width: 1100px;
     margin: 26px auto 0 auto;
     overflow: hidden;
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
 }
 
 .book-section-slide {
     display: flex;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* margin-top: 26px; */
     /* margin: 26px auto 0 auto; */
     /* margin: 26px 78px 0 78px; */
@@ -60,11 +60,11 @@
 }
 
 #prevBtn {
-    left: 5%;
+    left: 3%;
 }
 
 #nextBtn {
-    right: 5%;
+    right: 3%;
 }
 
 #prevBtn svg,
@@ -173,7 +173,7 @@
     display: flex;
     width: 1100px;
     padding-top: 15px;
-    padding-left: 58px;
+    padding-left: 35px;
     margin: 0 auto;
 }
 
@@ -189,6 +189,29 @@
     width: 2em;
     height: auto;
 }
+
+@media screen and (max-width: 1280px) {
+    .carousel-container,
+    .book-section-category,
+    #browse-cat {
+        width: 900px;
+    }
+    .book-section-category,
+    #browse-cat {
+        padding-left: 20px;
+    }
+    .one-book {
+        max-width: 180px;
+        padding: 0 20px;
+    }
+    #prevBtn {
+        left: 1%;
+    }
+    
+    #nextBtn {
+        right: 1%;
+    }
+}
     
 @media screen and (max-width: 960px) {
     #browse-cat h2 {
@@ -196,11 +219,22 @@
     }
 
     .carousel-container {
-        width: 95%;
-        margin: 26px 0 0 5%;
+        width: 100%;
+        padding-left: 5%;
+        margin: 26px 0 0 0;
+        /* tidigare width: 95%, ingen padding, margin-left 5% */
 
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+    }
+    .book-section-category,
+    #browse-cat {
+        width: 100%;
+        padding-left: 5%;
+    }
+    .category-headline,
+    #browse-cat h2 {
+        padding-left: 20px;
     }
 
     .one-book {
@@ -215,6 +249,14 @@
     /* .book-section-slide {
         overflow-x: scroll;
     } */
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-container,
+    .book-section-category,
+    #browse-cat {
+        padding-left: 2%;
+    }
 }
 
 @media screen and (max-width: 660px) {

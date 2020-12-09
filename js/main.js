@@ -194,59 +194,70 @@ const carouselBooks = document.querySelectorAll('.one-book');
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
 
-// Clone of first 5 books -firstClone
-for (let i = 4; i >= 0; i--) {
-    var cloneFirst5 = carouselBooks[i].cloneNode(true);
-    cloneFirst5.classList.add("one-book");
-    cloneFirst5.classList.add("first-5-clone");
-    carouselBooks[9].after(cloneFirst5);
-}
+// MQ
+const mediaQuery = window.matchMedia("(min-width: 961px)")
 
-// Clone of first 5 books -firstClone
-for (let j = 5; j <= 9; j++) {
-    var cloneLast5 = carouselBooks[j].cloneNode(true);
-    cloneLast5.classList.add("one-book");
-    cloneLast5.classList.add("last-5-clone");
-    carouselBooks[0].before(cloneLast5);
-}
+function handleScreenChange(e) {
+    if (e.matches) {
+        // Clone first 5 books
+        for (let i = 4; i >= 0; i--) {
+            var cloneFirst5 = carouselBooks[i].cloneNode(true);
+            cloneFirst5.classList.add("one-book");
+            cloneFirst5.classList.add("first-5-clone");
+            carouselBooks[9].after(cloneFirst5);
+        }
 
-// Counter
-let counter = 5;
-console.log(counter)
-const size = carouselBooks[0].clientWidth;
+        // Clone last 5 books
+        for (let j = 5; j <= 9; j++) {
+            var cloneLast5 = carouselBooks[j].cloneNode(true);
+            cloneLast5.classList.add("one-book");
+            cloneLast5.classList.add("last-5-clone");
+            carouselBooks[0].before(cloneLast5);
+        }
 
-carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
-//Button listeners
+        // Counter
+        let counter = 5;
+        console.log(counter)
+        const size = carouselBooks[0].clientWidth;
+        console.log(size + " size");
 
-nextBtn.addEventListener('click', () => {
-    if(counter >= carouselSlide.children.length - 5) return;
-    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-    counter += 5;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    console.log(counter + " next")
-});
-
-prevBtn.addEventListener('click', () => {
-    if(counter <= 0) return;
-    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-    counter -= 5;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    console.log(counter + " prev")
-});
-
-carouselSlide.addEventListener('transitionend', () => {
-    if(counter === 0) {
-        carouselSlide.style.transition = 'none';
-        counter = carouselBooks.length;
-        console.log(counter);
         carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    }
-    if(counter === carouselSlide.children.length - 5) {
-        carouselSlide.style.transition = 'none';
-        console.log(carouselBooks.length + "length")
-        counter = counter - carouselBooks.length;
-        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    }
-});
 
+        //Button listeners
+
+        nextBtn.addEventListener('click', () => {
+            if(counter >= carouselSlide.children.length - 5) return;
+            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+            counter += 5;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            console.log(counter + " next")
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if(counter <= 0) return;
+            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+            counter -= 5;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            console.log(counter + " prev")
+        });
+
+        carouselSlide.addEventListener('transitionend', () => {
+            if(counter === 0) {
+                carouselSlide.style.transition = 'none';
+                counter = carouselBooks.length;
+                console.log(counter);
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+            if(counter === carouselSlide.children.length - 5) {
+                carouselSlide.style.transition = 'none';
+                console.log(carouselBooks.length + "length")
+                counter = counter - carouselBooks.length;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+        });
+    }
+}
+mediaQuery.addListener(handleScreenChange)
+
+handleScreenChange(mediaQuery)
