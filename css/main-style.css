@@ -12,7 +12,6 @@ html {
 :root {
     /* --main-bg-color: #f2f0ef; */
     --main-bg-color: #fefefe;
-    --section-bg-color: #ffffff;
     --main-text-color: #1e2425;
     --primary-brand-color: #bfe5cf;
     --secondary-brand-color: #4D64A8;
@@ -35,7 +34,7 @@ ul {
 }
 
 li, a {
-    color: #1e2425;
+    color: var(--main-text-color);
 }
 
 li {
@@ -67,10 +66,10 @@ button {
 }
 
 /* Huvudstruktur */
-.flex-wrapper {
+/* .flex-wrapper {
     display: flex;
     flex-direction: column;
-}
+} */
 
 /* Sidopadding för allt content utom header och footer */
 /* .main-flex-item-content {

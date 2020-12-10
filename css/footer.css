@@ -1,9 +1,9 @@
 #footer {
-    font-size: 0.9em;
-    padding: 150px 8% 2em 8%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "shopping customer-service . . social-media social-media";
+    padding: 150px 8% 2em 8%;
+    font-size: 0.9em;
 }
 
 #shopping {
@@ -18,8 +18,8 @@
 }
 
 .footer-headline {
-    font-weight: bold;
     padding-bottom: 0.75em;
+    font-weight: bold;
 }
 
 #social-media-links {
@@ -29,7 +29,6 @@
 #social-media-links svg {
     width: 40px;
     height: 40px;
-    
 }
 
 .facebook {
@@ -49,17 +48,16 @@
     margin-right: 30px;
 }
 
+#social-media-links svg:hover {
+    fill: var(--secondary-brand-color);
+}
+
 /* Background */
 .flex-wrapper {
     background-image: url("../img/background/mindful-reading-footer-mintgreen.svg");
     background-repeat: no-repeat;
     background-position: 0 2290px;
     background-size: 100% auto;
-}
-
-/* Hover */
-#social-media-links svg:hover {
-    fill: var(--secondary-brand-color);
 }
 
 @media screen and (max-width: 1280px) {
@@ -80,7 +78,6 @@
     }
 }
 
-
 @media screen and (max-width: 768px) {
     .flex-wrapper {
         background-position: 0 2270px;
@@ -94,6 +91,7 @@
         "social-media";
         padding-bottom: 3em;
     }
+
     .footer-content {
         justify-self: center;
     }
@@ -109,7 +107,7 @@
     #shopping,
     #customer-service {
     margin: 0 0 25px 0;
-}
+    }
 }
 
 @media screen and (max-width: 660px) {
@@ -128,6 +126,7 @@
     .flex-wrapper {
         background-position: 0 2750px;
     }
+    
     #footer {
         padding-top: 100px;
     }

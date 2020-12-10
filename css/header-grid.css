@@ -1,8 +1,6 @@
 #header {
-    width: 100%;
     height: 122px;
     padding: 0 78px;
-    background-color: var(--main-bg-color);
 
     display: grid;
     grid-template-columns: 315px 1fr 105px 210px;
@@ -10,22 +8,18 @@
 
 /* arrow */
 .down-arrow {
+    display: inline-block;
     border: solid var(--main-text-color);
     border-width: 0 2px 2px 0;
-    padding: 3px;
     margin: 0 0 2px 3px;
-    display: inline-block;
+    padding: 3px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
 
 /* dropdowns */
 #main-menu {
-    /* grid-area: main-menu; */
     grid-column: 1 / 2;
-    height: 86px;
-    display: flex;
-    justify-content: flex-start;
 }
 
 #dropdown-container {
@@ -33,16 +27,12 @@
 }
 
 .dropdown {
-    /* position: relative; */
     margin-bottom: 36px;
 }
 
 .dropbtn {
-    border: none;
-    background-color: transparent;
-    /* position: relative; */
-    padding: 2.5em 15px 0 15px;
     height: 86px;
+    padding: 2.5em 15px 0 15px;
 }
 
 .dropbtn, .dropdown-ul li, p {
@@ -74,9 +64,7 @@
 
 /* Logo */
 #header-logo {
-    /* grid-area: logo; */
     grid-column: 2 / 3;
-    width: 100%;
 
     display: flex;
     justify-content: center;
@@ -95,20 +83,13 @@
 
 /* Searchbar */
 #searchbar {
-    /* grid-area: searchbar; */
     grid-column: 3 / 4;
-    background-color: var(--main-bg-color);
     width: 105px;
     margin-bottom: 36px;
     position: relative;
     justify-self: end;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    
-    /* transition: width 0.5s; */
 } 
 
 #searchbar.active {
@@ -116,7 +97,6 @@
     width: 100%;
     margin-left: 78px;
     padding-right: 105px;
-    /* transform: translate(0, 0); */
 }
 
 #searchbar input {
@@ -126,18 +106,15 @@
     border: 1px solid #dfdfdf;
     border-radius: 6px;
     padding: 0.9em;
-    justify-items: flex-start;
 
-    transform-origin: right center;
-    
-    transition: all 3s;
+    /* transform-origin: right center; */
+    transition: all 2s;
 }
 
 #searchbar input.active {
     display: block;
     width: 100%;
     margin-top: 40px;
-    /* margin-right: 105px; */
     transform: translate(0, 0);
 }
 
@@ -145,24 +122,16 @@
 #submit {
     width: 105px;
     height: 86px;
-    background-color: transparent;
-    border: none;
+    padding-top: 3.2em;
     cursor: pointer;
 
     display: flex;
     justify-content: flex-end;
-
-    padding-top: 3.2em;
-    /* margin: 0 auto; */
 }
 
 #submit.active {
-    /* background-color: var(--primary-brand-color); */
-    /* width: 105px;
-    height: 17.5px; */
     position: absolute;
     right: 0;
-    bottom: 0;
 }
 
 #search-icon {
@@ -178,7 +147,7 @@
     position: absolute;
     top: 51px;
     right: 15px;
-    font-size: 14.4px;
+    font-size: 0.9rem;
 }
 
 #main-menu.hide,
@@ -187,21 +156,19 @@
 }
 
 /* Icons */
-
 #main-nav-icons {
-    /* grid-area: nav-icons; */
     grid-column: 4 / 5;
     display: flex;
     height: 86px;
-    margin-bottom: 36px;
 }
 
 .nav-icon {
+    height: 86px;
+    padding: 0 0.5em;
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 86px;
-    padding: 0 0.5em;
 }
 
 #account, #basket {
@@ -252,7 +219,6 @@
 /* Tablet */
 @media screen and (max-width: 960px) {
     #header {
-        width: 100%;
         height: 102px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 60px 40px;
@@ -290,6 +256,10 @@
         padding-right: 50px;
     }
 
+    .nav-icon:hover {
+        background-color: transparent;
+    }
+
     #account, #basket {
         height: 32px;
         width: 32px;
@@ -305,36 +275,30 @@
     /* Searchbar */
     #searchbar {
         grid-area: searchbar;
-        margin: 0;
         width: 100%;
         height: 40px;
-        display: flex;
+        margin: 0;
         border-top: 1px solid rgb(216, 216, 216);
         border-bottom: 1px solid rgb(216, 216, 216);
+        display: flex;
     }
 
     #searchbar input {
         display: block;
-        padding: 0.5em;
         width: 90%;
+        padding: 0.5em;
         padding-left: 50px;
         font-size: 0.9em;
-        /* border-width: 2px; */
     }
 
     #submit {
-        /* width: 10%; */
-        padding: 0;
         width: 40px;
         margin-right: 50px;
-        /* padding-right: 50px; */
-        /* padding-left: 70px; */
-        /* border-width: 2px; */
+        padding: 0;
     }
 
     #search-icon {
         width: 24px;
-
         top: 7px;
         right: 50px;
     }
@@ -346,11 +310,8 @@
     #searchbar input,
     #submit {
         max-width: none;
-        border-radius: 0 0 0 0;
         border: none;
-        /* border-top: 1px solid #c7c4c3; */
-        /* border-bottom: 1px solid #c7c4c3; */
-        /* background-color: rgba(238, 238, 238); */
+        border-radius: 0 0 0 0;
     }
 
     #searchbar:hover {
@@ -358,26 +319,19 @@
         border-radius: 0;
     }
 
-    /* Search button on click */
-    #searchbar-nav.green-btn {
-        background-color: var(--primary-brand-color);
-    }
-
     /* Hamburger menu */
-
     #menuToggle {
         display: inline-block;
         cursor: pointer;
-        /* position: absolute;
-        top: 47px; */
     }
 
     .bar1, .bar2, .bar3 {
         width: 33px;
         height: 4px;
         background-color: var(--main-text-color);
-        border-radius: 3px;
         margin: 5px 0;
+        border-radius: 3px;
+
         transition: 0.5s;
         transform-origin: 4px 0px;
     }
@@ -403,12 +357,11 @@
         display: none;
         background-color: white;
         width: 100%;
+        padding: 30px 30px 60px 30px;
         position: absolute;
         top: 60px;
         left: 0;
         z-index: 1;
-
-        padding: 30px 30px 60px 30px;
     }
 
     #dropdown-container.show {
@@ -440,7 +393,6 @@
         display: block;
         position: relative;
         padding: 0;
-        
     }
 
     .dropdown-ul {
@@ -450,10 +402,10 @@
 
     #menu-ul li,
     #dropdown-categories .dropbtn {
+        width: 100%;
+        padding: 1em 0;
         border-bottom: 1px solid #f5f5f5;
         border-top: 1px solid #f5f5f5;
-        padding: 1em 0;
-        width: 100%;
         text-align: start;
         font-weight: 500;
         cursor: pointer;
@@ -464,8 +416,8 @@
     }
 
     #categories-ul {
-        padding: 1em 0;
         display: none;
+        padding: 1em 0;
     }
 
     #categories-ul.show {
@@ -477,13 +429,11 @@
         text-align: left;
     }
 
-    /* Remover hover */
     .dropbtn:hover {
         background-color: transparent;
     }
 
     /* Nav icons */
-
     #main-nav-icons {
         height: auto;
         margin-bottom: 0;
@@ -506,20 +456,18 @@
     #basket img {
         width: 25px;
         height: auto;
-
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
 
     /* Hover */
-#searchbar-nav:hover,
-.nav-icon:hover,
-.dropbtn:hover {
-    /* background-color: transparent; */
+    #searchbar-nav:hover,
+    .nav-icon:hover,
+    .dropbtn:hover {
     border-radius: none;
     padding-bottom: none;
-}
-}
+    }
+    }
 
 @media screen and (max-width: 768px) {
     #main-menu,
