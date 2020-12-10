@@ -20,27 +20,13 @@ function toggleCategories() {
     categoriesMenu.classList.toggle("show");
 }
 
-// Searchbar desktop med jQuery
-/* let searchDesktop = document.getElementById("searchbar-nav");
-let searchInput = document.querySelector("#searchbar input")
+//-----------------------------------------------------------------------
+// Search on click
 
-searchDesktop.addEventListener("click", showSearchInput);
-
-function showSearchInput() {
-    searchDesktop.classList.add("show");
-    searchInput.classList.add("show");
-} */
-
-// #######################//////////////
 let searchBtn = document.getElementById("submit");
 /* let searchBarClicked; */
 
 searchBtn.addEventListener("click", toggleSearch);
-
-
-
-
-
 
 function toggleSearch() {
     
@@ -57,8 +43,7 @@ function toggleSearch() {
       $('#header-logo').addClass("hide");
       console.log("hej"); 
 
-            //Hide elements
-    
+    //Hide elements
     const outsideClicklistener = (event) => {
         /* console.log(searchBarClicked);  */
         var $target = $(event.target);
@@ -152,23 +137,10 @@ function hideElement(event) {
 }); */
 
 
+//-----------------------------------------------------------------------
+// Searchbar on tablet and mobile
 
-
-
-/* Searchbar tablet/ mobile */
-/* let searchInput = document.querySelector("#searchbar input"); */
-/* let searchBtn = document.querySelector("#searchbar-nav");
-
-searchInput.addEventListener("click", toggleSearchBtn);
-
-function toggleSearchBtn() {
-    searchBtn.classList.add("green-btn");
-} */
-
-
-//###########################
-// Searchbar on max-width 960px
-let windowSize = window.matchMedia("(max-width: 960px");
+const windowSize = window.matchMedia("(max-width: 960px");
 
 function searchSmallerMedia(windowSize) {
     if (windowSize.matches) {
@@ -199,6 +171,7 @@ const mediaQuery = window.matchMedia("(min-width: 961px)")
 
 function handleScreenChange(e) {
     if (e.matches) {
+
         // Clone first 5 books
         for (let i = 4; i >= 0; i--) {
             var cloneFirst5 = carouselBooks[i].cloneNode(true);
@@ -215,23 +188,18 @@ function handleScreenChange(e) {
             carouselBooks[0].before(cloneLast5);
         }
 
-
         // Counter
         let counter = 5;
-        console.log(counter)
         const size = carouselBooks[0].clientWidth;
-        console.log(size + " size");
 
         carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
         //Button listeners
-
         nextBtn.addEventListener('click', () => {
             if(counter >= carouselSlide.children.length - 5) return;
             carouselSlide.style.transition = 'transform 0.4s ease-in-out';
             counter += 5;
             carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-            console.log(counter + " next")
         });
 
         prevBtn.addEventListener('click', () => {
@@ -239,25 +207,46 @@ function handleScreenChange(e) {
             carouselSlide.style.transition = 'transform 0.4s ease-in-out';
             counter -= 5;
             carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-            console.log(counter + " prev")
         });
 
         carouselSlide.addEventListener('transitionend', () => {
             if(counter === 0) {
                 carouselSlide.style.transition = 'none';
                 counter = carouselBooks.length;
-                console.log(counter);
                 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
             }
             if(counter === carouselSlide.children.length - 5) {
                 carouselSlide.style.transition = 'none';
-                console.log(carouselBooks.length + "length")
                 counter = counter - carouselBooks.length;
                 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
             }
         });
     }
+    
 }
 mediaQuery.addListener(handleScreenChange)
 
 handleScreenChange(mediaQuery)
+
+//-----------------------------------------------------------------------
+// Categories popup
+
+let popupLink = document.querySelector('#browse-cat');
+let categoriesList = document.querySelector('#categories-list');
+let escapeBtn = document.querySelector('#escape-button');
+let readingSection = document.querySelector('#why-reading-section');
+
+popupLink.addEventListener('click', openCategories);
+escapeBtn.addEventListener('click', closeCategories);
+
+function openCategories() {
+    popupLink.classList.add('hide');
+    categoriesList.classList.add('active');
+    readingSection.style.marginTop = '100px';
+}
+
+function closeCategories() {
+    popupLink.classList.remove('hide');
+    categoriesList.classList.remove('active');
+    readingSection.style.marginTop = '240px';
+}

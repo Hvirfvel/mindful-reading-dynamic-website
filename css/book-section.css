@@ -165,6 +165,7 @@
     margin: 0 auto;
     padding-top: 15px;
     padding-left: 35px;
+    cursor: pointer;
 }
 
 #browse-cat h2 {
@@ -181,12 +182,12 @@
 }
 
 #categories-list {
-    /* display: none; */
+    display: none;
     background-color: white;
     width: 80%;
     max-width: 933px;
     position: relative;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 8px #d8d8d8;
@@ -206,23 +207,45 @@
 }
 
 #escape-button {
-    background-color: yellow;
-    width: 33px;
-    height: 33px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding-top: 1px;
+    padding-left: 3px;
     position: absolute;
     right: 10px;
     top: 10px;
+    cursor: pointer;
 }
 
 .escape-bar1,
 .escape-bar2 {
     width: 33px;
     height: 4px;
-    margin: 5px 0;
     border-radius: 3px;
-    z-index: 1000;
-    color: var(--main-text-color);
-    
+    background-color: var(--main-text-color);
+}
+
+.escape-bar1 {
+    margin-bottom: 18px;
+    transform-origin: 0% 0%;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.escape-bar2 {
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 961px) {
+    #categories-list.active {
+    display: block;
+    }
+    #browse-cat.hide {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1280px) {

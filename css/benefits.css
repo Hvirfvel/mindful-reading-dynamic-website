@@ -97,7 +97,7 @@ body {
 
 @media screen and (max-width: 960px) {
     body {
-        background-position: 0 1500px;
+        background-position: 0 1700px;
     }
 }
 
@@ -112,6 +112,12 @@ body {
     
     body {
         background-position: 0 1400px;
+    }
+}
+
+@media screen and (max-width: 596px) {
+    #benefits-link {
+        text-align: center;
     }
 }
 
