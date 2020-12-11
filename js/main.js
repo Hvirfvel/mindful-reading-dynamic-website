@@ -114,31 +114,32 @@ function handleScreenChange(e) {
             }
         }
 
+        //-----------------------------------------------------------------------
+        // Categories popup
+
+        const popupLink = document.querySelector('#browse-cat');
+        const categoriesList = document.querySelector('#categories-list');
+        const escapeBtn = document.querySelector('#escape-button');
+        const readingSection = document.querySelector('#why-reading-section');
+
+        popupLink.addEventListener('click', openCategories);
+        escapeBtn.addEventListener('click', closeCategories);
+
+        function openCategories() {
+            popupLink.classList.add('hide');
+            categoriesList.classList.add('active');
+            readingSection.style.marginTop = '100px';
+        }
+
+        function closeCategories() {
+            popupLink.classList.remove('hide');
+            categoriesList.classList.remove('active');
+            readingSection.style.marginTop = '240px';
+        }
+
     }
     
 }
 
 handleScreenChange(mediaQuery);
 
-//-----------------------------------------------------------------------
-// Categories popup
-
-const popupLink = document.querySelector('#browse-cat');
-const categoriesList = document.querySelector('#categories-list');
-const escapeBtn = document.querySelector('#escape-button');
-const readingSection = document.querySelector('#why-reading-section');
-
-popupLink.addEventListener('click', openCategories);
-escapeBtn.addEventListener('click', closeCategories);
-
-function openCategories() {
-    popupLink.classList.add('hide');
-    categoriesList.classList.add('active');
-    readingSection.style.marginTop = '100px';
-}
-
-function closeCategories() {
-    popupLink.classList.remove('hide');
-    categoriesList.classList.remove('active');
-    readingSection.style.marginTop = '240px';
-}
