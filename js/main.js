@@ -20,119 +20,21 @@ function toggleCategories() {
     categoriesMenu.classList.toggle("show");
 }
 
-//-----------------------------------------------------------------------
-// Search on click
-
-let searchBtn = document.getElementById("submit");
-const searchbar = document.querySelector('#searchbar')
-
-searchBtn.addEventListener("click", toggleSearch);
-
-function toggleSearch() {
-
-    $('#searchbar').each(function() {
-        $(this).replaceWith($('<form>' + this.innerHTML + '</form>'));
-      });
-      $('#submit').attr("type", "submit").addClass("active");
-      $('#header form').attr("id", "searchbar").addClass("active");
-      $('#searchbar input').addClass("active");
-
-      $('#header-logo').addClass("hide");
-
-    //Hide elements
-
-    document.addEventListener('click', outsideClick);
-    function outsideClick(event) {
-        if(event.target.closest('#searchbar')) return
-        $('#searchbar').removeClass("active");
-        $('#searchbar input').removeClass("active"  );
-        $('#submit').attr("type", "button").removeClass("active");
-        $('#header-logo').removeClass("hide");
-
-        $('#header form').each(function() {
-            $(this).replaceWith($('<div id="searchbar">' + this.innerHTML + '</div>'));
-        });
-        /* location.reload(); */
-    };
-};
-
-//-----------------------------------------------------------------------
-// Search on click tidigare lösning
-
-/* let searchBtn = document.getElementById("submit");
-
-searchBtn.addEventListener("click", toggleSearch);
-
-function toggleSearch() {
-
-    $('#searchbar').each(function() {
-        $(this).replaceWith($('<form>' + this.innerHTML + '</form>'));
-      });
-      $('#submit').attr("type", "submit").addClass("active");
-      $('#header form').attr("id", "searchbar").addClass("active");
-      $('#searchbar input').addClass("active");
-
-      $('#header-logo').addClass("hide");
-
-    //Hide elements
-    const outsideClicklistener = (event) => {
-        var $target = $(event.target);
-        if(!$target.closest('#searchbar').length && 
-        $('#searchbar input').is(":visible")) {
-            
-                $('#searchbar').removeClass("active");
-                $('#searchbar input').removeClass("active"  );
-                $('#submit').attr("type", "button").removeClass("active");
-                $('#header-logo').removeClass("hide");
-    
-                $('#header form').each(function() {
-                    $(this).replaceWith($('<div id="searchbar">' + this.innerHTML + '</div>'));
-                });
-            removeDocClickListener();
-        }
-    }; 
-
-    const removeDocClickListener = () => {
-        document.removeEventListener("click", outsideClicklistener)
-    }
-     
-    $(document).click(outsideClicklistener) 
-}; */
-
-//-----------------------------------------------------------------------
-// Searchbar on tablet and mobile
-
-const windowSize = window.matchMedia("(max-width: 960px");
-
-function searchSmallerMedia(windowSize) {
-    if (windowSize.matches) {
-        $('#searchbar').each(function() {
-            $(this).replaceWith($('<form id="searchbar">' + this.innerHTML + '</form>'));
-          });
-        $('#submit').attr("type", "submit");
-
-    }
-}
-
-windowSize.addListener(searchSmallerMedia);
-
-searchSmallerMedia(windowSize);
-
-//-----------------------------------------------------------------------
-// Carousel book-section
-
-const carouselSlide = document.querySelector('.book-section-slide');
-const carouselBooks = document.querySelectorAll('.one-book');
-
-// Buttons
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
-
+//------------------------------------------------------------------------------------
 // MQ
 const mediaQuery = window.matchMedia("(min-width: 961px)")
 
+mediaQuery.addEventListener('change', handleScreenChange);
+
 function handleScreenChange(e) {
     if (e.matches) {
+
+        // Carousel book-section ----------------
+        const carouselSlide = document.querySelector('.book-section-slide');
+        const carouselBooks = document.querySelectorAll('.one-book');
+
+        const prevBtn = document.querySelector('#prevBtn');
+        const nextBtn = document.querySelector('#nextBtn');
 
         // Clone first 5 books
         for (let i = 4; i >= 0; i--) {
@@ -183,20 +85,48 @@ function handleScreenChange(e) {
                 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
             }
         });
+
+        // Search on click -------------
+
+        const searchBtn = document.getElementById("submit");
+        const searchbar = document.querySelector('#searchbar')
+
+        searchBtn.addEventListener("click", toggleSearch);
+
+        function toggleSearch() {
+            $('#submit').toggleClass("active");
+            $('#searchbar input').toggleClass("active");
+            $('#searchbar').toggleClass("active");
+            $('#header-logo').toggleClass("hide");
+
+            //Hide elements
+            document.addEventListener('click', outsideClick);
+            function outsideClick(event) {
+                if(event.target.closest('#searchbar')) return
+                $('#searchbar').removeClass("active");
+                $('#searchbar input').removeClass("active");
+                $('#submit').removeClass("active");
+                $('#header-logo').removeClass("hide");
+                documentClick();
+            } 
+            function documentClick() {
+                document.removeEventListener('click', outsideClick);
+            }
+        }
+
     }
     
 }
-mediaQuery.addListener(handleScreenChange)
 
-handleScreenChange(mediaQuery)
+handleScreenChange(mediaQuery);
 
 //-----------------------------------------------------------------------
 // Categories popup
 
-let popupLink = document.querySelector('#browse-cat');
-let categoriesList = document.querySelector('#categories-list');
-let escapeBtn = document.querySelector('#escape-button');
-let readingSection = document.querySelector('#why-reading-section');
+const popupLink = document.querySelector('#browse-cat');
+const categoriesList = document.querySelector('#categories-list');
+const escapeBtn = document.querySelector('#escape-button');
+const readingSection = document.querySelector('#why-reading-section');
 
 popupLink.addEventListener('click', openCategories);
 escapeBtn.addEventListener('click', closeCategories);

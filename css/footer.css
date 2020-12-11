@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 960px) {
     .flex-wrapper {
-        background-position: 0 2630px;
+        background-position: 0 2600px;
     }
 }
 
@@ -140,6 +140,6 @@
 
 @media screen and (max-width: 398px) {
     .flex-wrapper {
-        background-position: 0 2710px;
+        background-position: 0 2750px;
     }
 }
