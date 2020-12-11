@@ -93,7 +93,7 @@
 } 
 
 #searchbar.active {
-    grid-column: 1 / 4;
+    grid-column: 2 / 4;
     width: 100%;
     margin-left: 78px;
     padding-right: 105px;
@@ -150,7 +150,6 @@
     font-size: 0.9rem;
 }
 
-#main-menu.hide,
 #header-logo.hide {
     display: none;
 }
